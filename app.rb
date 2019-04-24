@@ -7,15 +7,13 @@ class App < Sinatra::Base
 
   post '/newteam' do
     @team = {
-      teamname: params[:name],
-      coach: params[:coach],
-      pg: params[:pg],
-      sg: params[:sg],
-      pf: params[:pf],
-      sf: params[:sf],
-      c: params[:c],
+      "Team Name": params[:name],
+      "Coach": params[:coach],
+      "Point Guard": params[:pg],
+      "Shooting Guard": params[:sg],
+      "Power Forward": params[:pf],
+      "Small Forward": params[:sf],
+      "Center": params[:c],
     }
-
-    erb :team
   end
 end
